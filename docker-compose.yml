@@ -1,0 +1,11 @@
+services:
+  link-shortener:
+    build: .
+    restart: unless-stopped
+    ports:
+      - "3200:3200"
+    env_file: .env
+    environment:
+      DATABASE_PATH: /app/data/links.db
+    volumes:
+      - ./data:/app/data

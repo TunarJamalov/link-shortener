@@ -1,0 +1,19 @@
+[Unit]
+Description=Self-hosted link shortener
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=shortener
+Group=shortener
+WorkingDirectory=/opt/link-shortener
+ExecStart=/usr/bin/node /opt/link-shortener/dist/index.js
+Restart=on-failure
+RestartSec=5
+Environment=NODE_ENV=production
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
