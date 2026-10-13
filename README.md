@@ -2,6 +2,8 @@
 
 A small, self-hosted alternative to hosted link shorteners such as Bitly. Create short links on your own domain, see click statistics, and keep the data in one SQLite file. It runs as a single Node.js process with no Redis, PostgreSQL, Docker, or external account required.
 
+![Link shortener dashboard](docs/dashboard.png)
+
 ## Features
 
 - Short links with generated or custom slugs, titles, expiry dates, and click limits
